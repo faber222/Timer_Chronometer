@@ -44,8 +44,8 @@ Marque com x cada um dos itens que atendeu ao desenvolver este projeto.
 
 - [ ] Diagrama de classes UML (perspectiva de implementação) salvo em um arquivo chamado `modelagem.png` na raiz do repositório. 
   - Você deve obrigatoriamente fazer uso de associações entre classes
-- [ ] Projeto Java com gradle, indicando e provendo as dependências de bibliotecas externas. 
-- [ ] Criar um arquivo `.gitignore` adequado ao projeto
+- [X] Projeto Java com gradle, indicando e provendo as dependências de bibliotecas externas. 
+- [X] Criar um arquivo `.gitignore` adequado ao projeto
 - [ ] Comportamento correto do cronômetro e do contador regressivo
 - [ ] Representação gráfica correta do *display*
 - [ ] Teste de unidade para garantir o funcionamento esperado para cada classe (com exceção da classe com o método `main`)
