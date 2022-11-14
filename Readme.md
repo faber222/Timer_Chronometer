@@ -42,7 +42,7 @@ Abaixo é apresentado um exemplo de como deverá desenhar um cronômetro ou um c
 Marque com x cada um dos itens que atendeu ao desenvolver este projeto.
 
 
-- [ ] Diagrama de classes UML (perspectiva de implementação) salvo em um arquivo chamado `modelagem.png` na raiz do repositório. 
+- [X] Diagrama de classes UML (perspectiva de implementação) salvo em um arquivo chamado `modelagem.png` na raiz do repositório. 
   - Você deve obrigatoriamente fazer uso de associações entre classes
 - [X] Projeto Java com gradle, indicando e provendo as dependências de bibliotecas externas. 
 - [X] Criar um arquivo `.gitignore` adequado ao projeto
