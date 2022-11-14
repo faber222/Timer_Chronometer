@@ -2,11 +2,9 @@ package engtelecom.poo;
 
 import org.junit.jupiter.api.Test;
 
-class PrincipalTest {
-
+public class SegmentoTest {
     @Test
-    void testMain() {
-        
+    void testDesenhaSegmento() {
+
     }
-  
 }
