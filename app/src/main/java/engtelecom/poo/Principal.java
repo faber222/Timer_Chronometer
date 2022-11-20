@@ -18,14 +18,16 @@ public class Principal {
 
     public static void main(String[] args) throws InterruptedException {
         Principal projeto = new Principal();
-        Cronometro cronometro = new Cronometro(100, 100, 20, Color.BLUE, Color.CYAN);
-        Contador contador = new Contador(10, 0, 0, 100, 200, 20, Color.BLUE, Color.CYAN);
+        Cronometro cronometro = new Cronometro(0, 400, 50, Color.BLACK, Color.GREEN);
+        Contador contador = new Contador(00, 0, 10, 0, 100, 50, Color.BLACK, Color.GREEN);
 
-        while (!cronometro.isFim() && !contador.isFim()) {
-            projeto.desenhoCanva.clear();
+        while (!cronometro.isFim() || !contador.isFim()) {
+            projeto.desenhoCanva.clear(projeto.desenhoCanva.LIGHT_GRAY);
             projeto.desenhoCanva.enableDoubleBuffering();
+
             contador.decrementa(projeto.desenhoCanva);
             cronometro.incrementa(projeto.desenhoCanva);
+
             projeto.desenhoCanva.show();
             // Dormindo por 1 segundo
             Thread.sleep(1000);

@@ -3,68 +3,76 @@ package engtelecom.poo;
 import edu.princeton.cs.algs4.Draw;
 
 import java.awt.Color;
-import java.awt.Font;
 
 public class Segmento {
-    private double posA;
-    private double porB;
-    private double posC;
-    private double posD;
-    private double posE;
-    private double posF;
-    private double posG;
-    private Color color;
-    private int posX;
-    private int posY;
-    private int size;
+    private double[] posX;
+    private double[] posY;
 
     /**
-     * @param posX the posX to set
+     * 
+     * @param fator
+     * @param xInicial
+     * @param yInicial
+     * @return
      */
-    public void setPosX(int posX) {
-        this.posX = posX;
+    private boolean segHorizontal(double fator, double xInicial, double yInicial) {
+        if (fator <= 100 && fator >= 20) {
+            double[] xHorizontal = { 0.1 * fator + xInicial, 0.2 * fator + xInicial, 1.0 * fator + xInicial,
+                    1.1 * fator + xInicial, 1.0 * fator + xInicial, 0.2 * fator + xInicial };
+
+            double[] yHorizontal = { 0.2 * fator + yInicial, 0.3 * fator + yInicial, 0.3 * fator + yInicial,
+                    0.2 * fator + yInicial, 0.1 * fator + yInicial, 0.1 * fator + yInicial };
+            this.posX = xHorizontal;
+            this.posY = yHorizontal;
+
+            return true;
+        }
+        return false;
     }
 
     /**
-     * @param posY the posY to set
+     * 
+     * @param fator
+     * @param xInicial
+     * @param yInicial
+     * @return
      */
-    public void setPosY(int posY) {
-        this.posY = posY;
+    private boolean segVertical(double fator, double xInicial, double yInicial) {
+        if (fator <= 100 && fator >= 20) {
+            double[] xVertical = { 0.1 * fator + xInicial, 0.2 * fator + xInicial, 0.2 * fator + xInicial,
+                    0.1 * fator + xInicial, 0 * fator + xInicial, 0 * fator + xInicial };
+            double[] yVertical = { 0.2 * fator + yInicial, 0.3 * fator + yInicial, 1.0 * fator + yInicial,
+                    1.1 * fator + yInicial, 1.0 * fator + yInicial, 0.3 * fator + yInicial };
+            this.posX = xVertical;
+            this.posY = yVertical;
+
+            return true;
+        }
+        return false;
     }
 
     /**
-     * @param size the size to set
+     * 
+     * @param x
+     * @param y
+     * @param cor
+     * @param desenho
+     * @param fator
+     * @param horizontal
+     * @return
      */
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public void desenhaSegmentoA(Color c) {
-        // TODO implement here
-    }
-
-    public void desenhaSegmentoB(Color c) {
-        // TODO implement here
-    }
-
-    public void desenhaSegmentoC(Color c) {
-        // TODO implement here
-    }
-
-    public void desenhaSegmentoD(Color c) {
-        // TODO implement here
-    }
-
-    public void desenhaSegmentoE(Color c) {
-        // TODO implement here
-    }
-
-    public void desenhaSegmentoF(Color c) {
-        // TODO implement here
-    }
-
-    public void desenhaSegmentoG(Color c) {
-        // TODO implement here
+    public boolean desenhaSegmento(double x, double y, Color cor, Draw desenho, double fator, boolean horizontal) {
+        if (x <= 800 && x >= 0 && y <= 800 && y >= 0) {
+            if (horizontal) {
+                segHorizontal(fator, x, y);
+            } else {
+                segVertical(fator, x, y);
+            }
+            desenho.setPenColor(cor);
+            desenho.filledPolygon(this.posX, this.posY);
+            return true;
+        }
+        return false;
     }
 
 }
