@@ -50,9 +50,9 @@ public class Display {
         for (int i = 0; i < 6; i++) {
             Digito dig = new Digito(this.posX, this.posY, this.size);
             this.digitos.add(dig);
-            this.posX += this.size * 1.3;
+            this.posX += this.size * 1.1;
             if (i == 1 || i == 3) {
-                this.posX += this.size * 0.9;
+                this.posX += this.size * 0.5;
 
             }
         }
@@ -72,20 +72,18 @@ public class Display {
             this.digitos.get(0).desenhaDigito(this.colorOn, this.colorOff, this.dezena, desenho);
             this.digitos.get(1).desenhaDigito(this.colorOn, this.colorOff, this.unidade, desenho);
 
-            desenhaQuadrado(this.digitos.get(1).getPosX() + (this.size * 1.7), this.posY + (this.size * 1.7), this.size,
+            desenhaQuadrado(this.digitos.get(1).getPosX() + (this.size * 1.30), this.posY + (this.size * 1.7), this.size * 0.8,
                     desenho);
-            desenhaQuadrado(this.digitos.get(1).getPosX() + (this.size * 1.7), this.posY + (this.size * 0.65),
-                    this.size,
+            desenhaQuadrado(this.digitos.get(1).getPosX() + (this.size * 1.30), this.posY + (this.size * 0.65), this.size * 0.8,
                     desenho);
 
             separaDezenaUnidade(m);
             this.digitos.get(2).desenhaDigito(this.colorOn, this.colorOff, this.dezena, desenho);
             this.digitos.get(3).desenhaDigito(this.colorOn, this.colorOff, this.unidade, desenho);
 
-            desenhaQuadrado(this.digitos.get(3).getPosX() + (this.size * 1.7), this.posY + (this.size * 1.7), this.size,
+            desenhaQuadrado(this.digitos.get(3).getPosX() + (this.size * 1.30), this.posY + (this.size * 1.7), this.size * 0.8,
                     desenho);
-            desenhaQuadrado(this.digitos.get(3).getPosX() + (this.size * 1.7), this.posY + (this.size * 0.65),
-                    this.size,
+            desenhaQuadrado(this.digitos.get(3).getPosX() + (this.size * 1.30), this.posY + (this.size * 0.65), this.size * 0.8,
                     desenho);
 
             separaDezenaUnidade(s);

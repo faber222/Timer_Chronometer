@@ -18,8 +18,8 @@ public class Principal {
 
     public static void main(String[] args) throws InterruptedException {
         Principal projeto = new Principal();
-        Cronometro cronometro = new Cronometro(0, 400, 50, Color.BLACK, Color.GREEN);
-        Contador contador = new Contador(00, 0, 10, 0, 100, 50, Color.BLACK, Color.GREEN);
+        Cronometro cronometro = new Cronometro(0, 400, 100, Color.BLACK, Color.GREEN);
+        Contador contador = new Contador(00, 0, 10, 0, 100, 100, Color.RED, Color.BLACK);
 
         while (!cronometro.isFim() || !contador.isFim()) {
             projeto.desenhoCanva.clear(projeto.desenhoCanva.LIGHT_GRAY);
