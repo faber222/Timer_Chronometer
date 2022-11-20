@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 public class CronometroTest {
     @Test
-    void testCronometro() {
+    void testIncrementa() {
 
     }
 
     @Test
-    void testIncrementa() {
+    void testIsFim() {
 
     }
 }

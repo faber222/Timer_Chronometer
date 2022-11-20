@@ -2,11 +2,9 @@ package engtelecom.poo;
 
 import org.junit.jupiter.api.Test;
 
-class PrincipalTest {
-
+public class PrincipalTest {
     @Test
     void testMain() {
-        
+
     }
-  
 }

@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 public class DigitoTest {
     @Test
-    void testDigito() {
+    void testDesenhaDigito() {
 
     }
 
     @Test
-    void testDesenhaDigito() {
+    void testGetPosX() {
 
     }
 }

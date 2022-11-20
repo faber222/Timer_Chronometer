@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 public class ContadorTest {
     @Test
-    void testContador() {
+    void testDecrementa() {
 
     }
 
     @Test
-    void testDecrementa() {
+    void testIsFim() {
 
     }
 }
