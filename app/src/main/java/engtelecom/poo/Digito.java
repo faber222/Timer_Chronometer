@@ -4,25 +4,62 @@ import java.awt.Color;
 
 import edu.princeton.cs.algs4.Draw;
 
+/**
+ * Classe digito
+ */
 public class Digito {
+    /**
+     * Apelido para segmento A = 6
+     */
     private static final int A = 6;
+    /**
+     * Apelido para segmento B = 3
+     */
     private static final int B = 3;
+    /**
+     * Apelido para segmento C = 2
+     */
     private static final int C = 2;
+    /**
+     * Apelido para segmento D = 2
+     */
     private static final int D = 4;
+    /**
+     * Apelido para segmento E = 0
+     */
     private static final int E = 0;
+    /**
+     * Apelido para segmento F = 1
+     */
     private static final int F = 1;
+    /**
+     * Apelido para segmento G = 5
+     */
     private static final int G = 5;
 
+    /**
+     * Atributo vetoral para segmentos
+     */
     private Segmento[] segmentos;
+    /**
+     * Atributo que representa pos x
+     */
     private double posX;
+    /**
+     * Atributo que representa pos y
+     */
     private double posY;
+    /**
+     * Atributo que representa tamanho
+     */
     private int size;
 
     /**
+     * Construtor principal, que recebe como parametro pos x, pos y e tamanho
      * 
-     * @param posX
-     * @param posY
-     * @param size
+     * @param posX Double para representar pos x
+     * @param posY Double para representar pos y
+     * @param size Integer para representar tamanho
      */
     public Digito(double posX, double posY, int size) {
         this.segmentos = new Segmento[7];
@@ -52,39 +89,41 @@ public class Digito {
     }
 
     /**
+     * Método privado usado para verificar se as posições de X e Y passadas são
+     * validas
      * 
-     * @param x
-     * @param y
-     * @return
+     * @param x Double para representar pos X
+     * @param y Double para representar pos Y
+     * @return Retorna true caso X e Y estejam entre (0 --> 800), se não, retorna
+     *         false
      */
     private boolean verificaCoord(double x, double y) {
         return (x <= 800 && x >= 0 && y <= 800 && y >= 0);
     }
 
     /**
+     * Método privado usado para verificar se o tamanho é valido
      * 
-     * @param size
-     * @return
+     * @param size Integer para representar o tamanho
+     * @return Retorna true caso o tamanho esteja entre 20 --> 100, se não, retorna
+     *         false
      */
     private boolean verificaSize(double size) {
         return size >= 20 && size <= 100;
     }
 
     /**
-     * /*
-     * 0 = E
-     * 1 = F
-     * 2 = C
-     * 3 = B
-     * 4 = D
-     * 5 = G
-     * 6 = A
+     * Método principal da classe digito.
+     * Recebe como parametro 2 Color, um para cor ligada e outro para cor desligada.
+     * Recebe um inteiro para representar o digito a ser desenhado e um Draw para
+     * ser o canvas a ser preenchido.
      *
-     * @param colorOn
-     * @param colorOff
-     * @param digito
-     * @param desenho
-     * @return
+     * @param colorOn  Color que representa a cor do segmento ligado
+     * @param colorOff Color que representa a cor do segmento desligado
+     * @param digito   Integer que representa o digito a ser desenhado
+     * @param desenho  Draw que representa o canvas que vai ser preenchido
+     * @return Retorna true caso o valor de digito esteja entre 0 --> 9, se não,
+     *         retorna false
      */
     public boolean desenhaDigito(Color colorOn, Color colorOff, int digito, Draw desenho) {
         if (digito >= 0 && digito <= 9) {

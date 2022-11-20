@@ -8,4 +8,4 @@
  */
 
 rootProject.name = '2022-02-projeto-pratico-01-faber222'
-include('principal')
+include('app')
