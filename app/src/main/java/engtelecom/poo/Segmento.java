@@ -17,8 +17,8 @@ public class Segmento {
      */
     private boolean segHorizontal(double fator, double xInicial, double yInicial) {
         if (fator <= 100 && fator >= 20) {
-            double[] xHorizontal = { 0.1 * fator + xInicial, 0.2 * fator + xInicial, 1.0 * fator + xInicial,
-                    1.1 * fator + xInicial, 1.0 * fator + xInicial, 0.2 * fator + xInicial };
+            double[] xHorizontal = { 0.1 * fator + xInicial, 0.2 * fator + xInicial, 0.8 * fator + xInicial,
+                    0.9 * fator + xInicial, 0.8 * fator + xInicial, 0.2 * fator + xInicial };
 
             double[] yHorizontal = { 0.2 * fator + yInicial, 0.3 * fator + yInicial, 0.3 * fator + yInicial,
                     0.2 * fator + yInicial, 0.1 * fator + yInicial, 0.1 * fator + yInicial };

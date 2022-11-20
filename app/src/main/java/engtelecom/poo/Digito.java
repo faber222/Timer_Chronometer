@@ -94,7 +94,7 @@ public class Digito {
             double xPosVertF = this.posX;
             double yPosVertF = this.posY + this.size;
 
-            double xPosVertC = xPosVertF + this.size;
+            double xPosVertC = xPosVertF + (this.size * 0.8);
             double yPosVertC = yPosVertF - this.size;
 
             double xPosVertB = xPosVertC;
