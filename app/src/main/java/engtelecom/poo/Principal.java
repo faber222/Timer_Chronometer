@@ -42,15 +42,14 @@ public class Principal {
 
         Cronometro cronometro = new Cronometro(0, 400, 100, Color.GREEN, verdeEscuro);
         ContadorRegressivo contador = new ContadorRegressivo(10, 40, 10, 0, 100, 100, Color.RED, vermelhoVinho);
-
         while (!cronometro.isFim() || !contador.isFim()) {
-            projeto.desenhoCanva.clear(Draw.BLACK);
-            projeto.desenhoCanva.enableDoubleBuffering();
+            projeto.getDesenhoCanva().clear(Draw.BLACK);
+            projeto.getDesenhoCanva().enableDoubleBuffering();
 
-            contador.decrementa(projeto.desenhoCanva);
-            cronometro.incrementa(projeto.desenhoCanva);
+            contador.decrementa(projeto.getDesenhoCanva());
+            cronometro.incrementa(projeto.getDesenhoCanva());
 
-            projeto.desenhoCanva.show();
+            projeto.getDesenhoCanva().show();
             // Dormindo por 1 segundo
             Thread.sleep(1000);
         }
