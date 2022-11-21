@@ -82,6 +82,15 @@ public class Digito {
     }
 
     /**
+     * usado no javatest segmento
+     * 
+     * @return the segmentos
+     */
+    public Segmento[] getSegmentos() {
+        return segmentos;
+    }
+
+    /**
      * @return the posX
      */
     public double getPosX() {

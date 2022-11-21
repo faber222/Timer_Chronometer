@@ -63,6 +63,35 @@ public class Cronometro {
     private boolean fim;
 
     /**
+     * usado apenas no javatest de cronometro
+     * 
+     * @param hour the hour to set
+     */
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    /**
+     * usado apenas no javatest de cronometro
+     * 
+     * @param min the min to set
+     */
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    /**
+     * usado apenas no javatest de cronometro
+     * 
+     * @param sec the sec to set
+     */
+    public void setSec(int sec) {
+        this.sec = sec;
+    }
+
+
+
+    /**
      * Construtor da classe Cronometro, que recebe como parametro 2 doubles, para
      * representar pos x e y, 1 int para representar o tamanho e 2 color, para
      * representar o segmento ligado e desligado
@@ -95,6 +124,9 @@ public class Cronometro {
             this.colorOn = Color.BLACK;
             this.colorOff = Color.GRAY;
         }
+        this.hour = 0;
+        this.min = 0;
+        this.sec = 0;
         this.fim = false;
         this.displayCro = new Display(this.coordX, this.coordY, this.size, this.colorOn, this.colorOff);
     }
@@ -112,7 +144,7 @@ public class Cronometro {
      */
     public boolean incrementa(Draw desenho) throws InterruptedException {
         if (!isFim()) {
-            if (!incrementaTempo(hour, min, sec)) {
+            if (!incrementaTempo(this.hour, this.min, this.sec)) {
                 return this.displayCro.desenhaDigitos(this.hour, this.min, this.sec, desenho);
             } else {
                 this.fim = true;
@@ -167,6 +199,15 @@ public class Cronometro {
      */
     private boolean verificaCor(Color cor) {
         return (cor != null);
+    }
+
+    /**
+     * usado apenas no javatest de display e digito
+     * 
+     * @return the displayCro
+     */
+    public Display getDisplayCro() {
+        return displayCro;
     }
 
     /**

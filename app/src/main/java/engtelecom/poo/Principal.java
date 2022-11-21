@@ -55,4 +55,11 @@ public class Principal {
             Thread.sleep(1000);
         }
     }
+
+    /**
+     * @return the desenhoCanva
+     */
+    public Draw getDesenhoCanva() {
+        return desenhoCanva;
+    }
 }

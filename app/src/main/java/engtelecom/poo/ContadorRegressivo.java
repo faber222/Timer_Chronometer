@@ -102,6 +102,33 @@ public class ContadorRegressivo {
     }
 
     /**
+     * usado apenas no javatest de contadorRegressivo
+     * 
+     * @param hour the hour to set
+     */
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    /**
+     * usado apenas no javatest de contadorRegressivo
+     * 
+     * @param min the min to set
+     */
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    /**
+     * usado apenas no javatest de contadorRegressivo
+     * 
+     * @param sec the sec to set
+     */
+    public void setSec(int sec) {
+        this.sec = sec;
+    }
+
+    /**
      * Método principal da classe ContadorRegressivo.
      * Tal método tem o objetivo de decrementar os valores de hora, minuto e
      * segundo, até que chegue a zero em todos os 3 atributos
@@ -186,6 +213,15 @@ public class ContadorRegressivo {
      */
     private boolean verificaCor(Color cor) {
         return (cor != null);
+    }
+
+    /**
+     * usado apenas no javatest de digito e display
+     * 
+     * @return the displayCon
+     */
+    public Display getDisplayCon() {
+        return displayCon;
     }
 
     /**

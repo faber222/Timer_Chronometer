@@ -115,7 +115,7 @@ public class Display {
      * @param m       Integer para representar o digito dos Minutos
      * @param s       Integer para representar o digito dos Segundos
      * @param desenho Draw para representar o quadro de desenho Canva
-     * @return True caso tenha conseguido desenhar tudo corretamente, se não retorna
+     * @return True caso hora, min e segundos sejam validos, se não retorna
      *         false
      */
     public boolean desenhaDigitos(int h, int m, int s, Draw desenho) {
@@ -211,6 +211,15 @@ public class Display {
      */
     private boolean verificaCor(Color cor) {
         return (cor != null);
+    }
+
+    /**
+     * usado no javatest de digito
+     * 
+     * @return the digitos
+     */
+    public ArrayList<Digito> getDigitos() {
+        return digitos;
     }
 
     /**
