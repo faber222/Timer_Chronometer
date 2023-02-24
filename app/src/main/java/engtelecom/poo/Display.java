@@ -158,7 +158,7 @@ public class Display {
      *         contrario retorna false
      */
     private boolean desenhaQuadrado(double posX, double posY, double size, Draw desenho) {
-        if (verificaCoord(posX, posY) && verificaSize(size)) {
+        if (verificaCoord(posX, posY) && verificaSizeSquare(size)) {
             desenho.setPenColor(this.colorOn);
             desenho.filledSquare(posX, posY, size / 4);
             return true;
@@ -200,6 +200,17 @@ public class Display {
      */
     private boolean verificaSize(double size) {
         return size >= 20 && size <= 100;
+    }
+
+    /**
+     * Metodo privado de verificação do tamanho
+     * 
+     * @param size Double para representar o tamanho, max = 100, min = 20
+     * @return Retorna true caso o valor de tamanho esteja dentro max e min, caso
+     *         contrario, retorna false
+     */
+    private boolean verificaSizeSquare(double size) {
+        return size >= 16 && size <= 100;
     }
 
     /**

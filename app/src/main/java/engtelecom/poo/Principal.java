@@ -1,7 +1,8 @@
 package engtelecom.poo;
 
-import edu.princeton.cs.algs4.Draw;
 import java.awt.Color;
+
+import edu.princeton.cs.algs4.Draw;
 
 /**
  * Classe principal
@@ -40,8 +41,8 @@ public class Principal {
 
         Principal projeto = new Principal();
 
-        Cronometro cronometro = new Cronometro(0, 400, 100, Color.GREEN, verdeEscuro);
-        ContadorRegressivo contador = new ContadorRegressivo(10, 40, 10, 0, 100, 100, Color.RED, vermelhoVinho);
+        Cronometro cronometro = new Cronometro(0, 400, 20, Color.GREEN, verdeEscuro);
+        ContadorRegressivo contador = new ContadorRegressivo(10, 40, 10, 0, 100, 40, Color.RED, vermelhoVinho);
         while (!cronometro.isFim() || !contador.isFim()) {
             projeto.getDesenhoCanva().clear(Draw.BLACK);
             projeto.getDesenhoCanva().enableDoubleBuffering();
